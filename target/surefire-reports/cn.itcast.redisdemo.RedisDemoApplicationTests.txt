@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: cn.itcast.redisdemo.RedisDemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 24.947 s <<< FAILURE! - in cn.itcast.redisdemo.RedisDemoApplicationTests
+contextLoads  Time elapsed: 21.252 s  <<< ERROR!
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Cannot connect to a Redis Sentinel: [RedisURI [host='192.168.19.128', port=27001], RedisURI [host='192.168.19.128', port=27002]]
+	at cn.itcast.redisdemo.RedisDemoApplicationTests.contextLoads(RedisDemoApplicationTests.java:16)
+Caused by: io.lettuce.core.RedisConnectionException: Cannot connect to a Redis Sentinel: [RedisURI [host='192.168.19.128', port=27001], RedisURI [host='192.168.19.128', port=27002]]
+	at cn.itcast.redisdemo.RedisDemoApplicationTests.contextLoads(RedisDemoApplicationTests.java:16)
+Caused by: io.lettuce.core.RedisConnectionException: Cannot connect Redis Sentinel at RedisURI [host='192.168.19.128', port=27002]
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.19.128:27002
+
