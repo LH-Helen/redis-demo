@@ -1,3 +1,5 @@
+server:
+  port: 8096
 logging:
   level:
     io.lettuce.core: debug
@@ -11,4 +13,5 @@ spring:
       nodes:
         - 192.168.19.128:27001
         - 192.168.19.128:27002
-        - 192.168.19.128:27002
+        - 192.168.19.128:27003
+    password: 123456
